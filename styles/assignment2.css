@@ -56,6 +56,10 @@
 
 }
 
+.hid {
+    display: none;
+}
+
 .banner {
     display: flex;
     justify-content: space-between;
@@ -74,7 +78,6 @@
 }
 
 .banner-text {
-    /* body-text */
     color: rgba(255, 255, 255, 0.5);
     font-size: 16px;
     font-weight: 400;
@@ -107,6 +110,7 @@
 
 .banner-img {
     display: flex;
+    justify-content: flex-end;
 }
 
 .box1 {
@@ -223,6 +227,12 @@
     border-radius: 50%;
 }
 
+.cmn-head {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .cmn-title {
     color: rgb(255, 255, 255);
     font-size: 18px;
@@ -235,6 +245,7 @@
     font-size: 14px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .master {
@@ -529,4 +540,139 @@ hr {
     font-weight: 400;
     text-align: center;
     padding: 30px 0;
+}
+
+
+/* smaller device */
+
+
+@media screen and (max-width: 576px) {
+    #nav-bar {
+        padding: 10px 10px 0 10px;
+    }
+    .nav-main {
+        flex-direction: column;
+    }
+    .nav-icon {
+        flex-direction: column;
+        display: none;
+    }
+    .hid {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 12px;
+        width: 8%;
+    }
+    .hid > img {
+        background-color: white;
+        width: 100%;
+    }
+    .banner {
+        flex-direction: column;
+    }
+    .banner-title {
+        font-size: 40px;
+    }
+    .banner-text {
+        font-size: 12px;
+    }
+    .hero-btn {
+        padding: 16px 25px;
+    }
+    .banner-btn {
+        padding: 16px 25px;
+    }
+    .banner-img {
+        
+    }
+    .box1 {
+        left: 220px;
+        top: 450px;
+        padding: 5px 0 0 10px;
+        width: 150px;
+        height: 80px;
+    }
+    .box2 {
+        left: 30px;
+        top: 630px;
+        width: 180px;
+        height: 80px;
+    }
+    .hero-title {
+        font-size: 35px;
+        padding-top: 20px;
+    }
+    .hero-text {
+        font-size: 12px;
+    }
+    #hero {
+        padding: 0;
+    }
+    .hero-start {
+        flex-direction: column;
+    }
+    .cmn-text {
+        font-size: 12px;
+    }
+    .master {
+        flex-direction: column;
+        padding: 20px;
+        margin: 10px;
+    }
+    .master-head {
+        padding: 10px 10px 30px 5px;
+    }
+    .master-title {
+        font-size: 40px
+    }
+    .master-text {
+        font-size: 11px;
+    }
+    .master-img {
+        width: 100%;
+        margin-top: 15px;
+    }
+    #legend {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .legend-title{
+        font-size: 22px;
+    }
+    .legend-text {
+        font-size: 11px;
+    }
+    #legend table {
+        margin: 20px 100px 20px 0;
+    }
+    .hero-form {
+        padding: 12px 10px;
+    }
+    .zero-form {
+        padding: 12px 145px 12px 10px;
+    }
+    .legend-form {
+        padding: 12px 180px 12px 20px;
+        margin-top: 15px;
+    }
+    #trainer {
+        padding: 10px 15px;
+    }
+    .tall {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 32px;
+    }
+    .end {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+    .end-head {
+        margin-bottom: 30px;
+    }
+    hr {
+        width: 350px;
+        left: 20px;
+    }
 }
